@@ -1,0 +1,85 @@
+        body {
+            background-color: #0a0f24; /* Dark blue background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            position: relative;
+            background: rgba(0, 0, 0, 0.8); /* Transparent dark form background */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: white;
+            width: 350px;
+            overflow: hidden;
+        }
+
+        .container h2 {
+            margin-bottom: 20px;
+        }
+
+        .form {
+            display: none; /* Hide signup by default */
+        }
+
+        .active {
+            display: block; /* Show active form */
+        }
+
+        .container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        .container button {
+            width: 100%;
+            padding: 10px;
+            background: #ff5733; /* Orange button */
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .container button:hover {
+            background: #ff784e;
+        }
+
+        .toggle-text {
+            margin-top: 15px;
+            font-size: 14px;
+            cursor: pointer;
+            color: #ff5733;
+        }
+
+        /* Animated Glowing Borders */
+        .glow {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            animation: glow-animation 3s infinite alternate ease-in-out;
+        }
+
+        .glow:nth-child(1) { background: red; top: 5px; left: 5px; }
+        .glow:nth-child(2) { background: cyan; top: 5px; right: 5px; }
+        .glow:nth-child(3) { background: lime; bottom: 5px; left: 5px; }
+        .glow:nth-child(4) { background: yellow; bottom: 5px; right: 5px; }
+
+        @keyframes glow-animation {
+            0% { transform: scale(1); box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); }
+            100% { transform: scale(1.5); box-shadow: 0 0 15px rgba(255, 255, 255, 0.9); }
+        }
